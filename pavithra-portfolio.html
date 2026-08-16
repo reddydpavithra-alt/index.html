@@ -5,24 +5,24 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Pavithra D — Mechanical Engineering Portfolio</title>
 <style>
-  @import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=IBM+Plex+Sans:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500;600&display=swap');
+  @import url('https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@500;600;700;800&family=IBM+Plex+Sans:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500;600&display=swap');
 
   :root{
-    --ink-navy:#0D1B2A;
-    --blue-deep:#123353;
-    --blue-mid:#1B4B7A;
-    --grid-line:rgba(143,190,224,0.16);
-    --grid-line-strong:rgba(143,190,224,0.32);
-    --paper:#F2EFE6;
-    --paper-line:rgba(13,27,42,0.08);
-    --paper-ink:#16232E;
-    --sky:#8FBEE0;
-    --orange:#E8622C;
-    --orange-dim:#c94f1f;
-    --off-white:#EAF2F8;
+    --ink-navy:#201E1B;
+    --blue-deep:#34302A;
+    --blue-mid:#9C8767;
+    --grid-line:rgba(196,184,163,0.14);
+    --grid-line-strong:rgba(196,184,163,0.30);
+    --paper:#EDE7DA;
+    --paper-line:rgba(28,24,20,0.09);
+    --paper-ink:#221F1B;
+    --sky:#CBB68C;
+    --orange:#BE6A2E;
+    --orange-dim:#9C5220;
+    --off-white:#F3EDE2;
     --mono:'IBM Plex Mono', monospace;
     --sans:'IBM Plex Sans', sans-serif;
-    --disp:'Space Grotesk', sans-serif;
+    --disp:'Big Shoulders Display', sans-serif;
   }
 
   *{ margin:0; padding:0; box-sizing:border-box; }
@@ -52,7 +52,7 @@
   .frame{
     position:fixed;
     inset:10px;
-    border:1px solid rgba(143,190,224,0.35);
+    border:1px solid rgba(196,184,163,0.35);
     pointer-events:none;
     z-index:40;
   }
@@ -264,7 +264,7 @@
   /* ---------- Gallery ---------- */
   .gallery-grid{ display:grid; grid-template-columns:1fr 1fr; gap:22px; }
   @media (max-width:700px){ .gallery-grid{ grid-template-columns:1fr; } }
-  .gallery-item{ border:1px solid var(--grid-line-strong); background:#08131F; }
+  .gallery-item{ border:1px solid var(--grid-line-strong); background:#17140F; }
   .gallery-img-wrap{ position:relative; overflow:hidden; }
   .gallery-img-wrap img{ width:100%; height:230px; object-fit:cover; transition:transform .5s ease; }
   .gallery-item:hover .gallery-img-wrap img{ transform:scale(1.04); }
@@ -286,15 +286,24 @@
   .t-role{ font-family:var(--disp); font-size:17px; font-weight:600; margin-bottom:4px; }
   .t-desc{ font-size:14.5px; opacity:0.85; }
 
-  .cert-list, .ach-list{ list-style:none; }
-  .cert-list li, .ach-list li{
-    font-family:var(--mono); font-size:13px; padding:12px 0; border-bottom:1px solid var(--paper-line);
-    display:flex; justify-content:space-between; gap:12px;
-  }
-  .cert-list li:first-child, .ach-list li:first-child{ border-top:1px solid var(--paper-line); }
   .subhead{ font-family:var(--mono); font-size:12px; letter-spacing:0.1em; text-transform:uppercase; color:var(--blue-mid); margin-bottom:14px; }
   .lead-col > div{ margin-bottom:40px; }
   .lead-col > div:last-child{ margin-bottom:0; }
+
+  .badge-grid{ display:grid; grid-template-columns:repeat(auto-fill,minmax(150px,1fr)); gap:12px; }
+  .badge-card{
+    border:1px solid var(--blue-mid); padding:18px 16px; text-align:left;
+    background:rgba(255,255,255,0.45); display:flex; flex-direction:column; gap:12px;
+    transition:background .2s, border-color .2s;
+  }
+  .badge-card:hover{ background:rgba(255,255,255,0.75); border-color:var(--orange); }
+  .badge-icon{ width:30px; height:30px; color:var(--orange); flex-shrink:0; }
+  .badge-title{ font-family:var(--disp); font-weight:700; font-size:16.5px; line-height:1.12; letter-spacing:0.01em; }
+  .badge-sub{ font-family:var(--mono); font-size:10px; letter-spacing:0.07em; text-transform:uppercase; color:var(--blue-mid); }
+  .badge-note{
+    font-family:var(--mono); font-size:11px; color:var(--blue-mid); opacity:0.85; margin-top:18px;
+    border-top:1px solid var(--paper-line); padding-top:14px;
+  }
 
   /* ---------- Contact / footer ---------- */
   .contact{
@@ -325,6 +334,25 @@
 </style>
 </head>
 <body>
+
+<svg style="display:none" aria-hidden="true">
+  <symbol id="icon-trophy" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M8 4h8v5a4 4 0 0 1-8 0V4z"/>
+    <path d="M8 5H4.5A1.5 1.5 0 0 0 3 6.5C3 8.5 4.5 10 7 10"/>
+    <path d="M16 5h3.5A1.5 1.5 0 0 1 21 6.5C21 8.5 19.5 10 17 10"/>
+    <path d="M12 13v3"/>
+    <path d="M9 20h6"/>
+    <path d="M10 16.5h4L14.5 20h-5L10 16.5z"/>
+  </symbol>
+  <symbol id="icon-seal" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+    <circle cx="12" cy="9" r="6.2"/>
+    <path d="M9 8.3l2 2 4-4"/>
+    <path d="M9 14.5L7.5 21l4.5-2.3L16.5 21 15 14.5"/>
+  </symbol>
+  <symbol id="icon-workshop" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M14.7 6.3a3.5 3.5 0 0 1-4.6 4.6L4 17l3 3 6.1-6.1a3.5 3.5 0 0 1 4.6-4.6L21 6l-3-3-3.3 3.3z"/>
+  </symbol>
+</svg>
 
 <div class="frame"></div>
 <div class="corner c-tl"><span class="h"></span><span class="v"></span></div>
@@ -591,22 +619,54 @@
       <div class="lead-col">
         <div>
           <div class="subhead">Achievements</div>
-          <ul class="ach-list">
-            <li><span>2nd Prize — Robotics Competition</span><span>2025</span></li>
-            <li><span>Robomanthan Pvt. Ltd. — design-build event</span><span>2025</span></li>
-          </ul>
+          <div class="badge-grid">
+            <div class="badge-card">
+              <svg class="badge-icon"><use href="#icon-trophy"/></svg>
+              <div>
+                <div class="badge-title">2nd Prize — Robotics Competition</div>
+                <div class="badge-sub">Robomanthan Pvt. Ltd. · 2025</div>
+              </div>
+            </div>
+          </div>
         </div>
         <div>
-          <div class="subhead">Certifications &amp; Workshops</div>
-          <ul class="cert-list">
-            <li><span>SolidWorks Certified</span></li>
-            <li><span>Autodesk Certified</span></li>
-            <li><span>MATLAB Onramp</span></li>
-            <li><span>Python 3.4.3 Completion</span></li>
-            <li><span>Industrial Robotics Workshop</span><span>3-Day</span></li>
-            <li><span>Fundamentals of Robotics</span><span>2-Day</span></li>
-            <li><span>EV Saksham — EV Workshop</span><span>5-Day</span></li>
-          </ul>
+          <div class="subhead">Certifications</div>
+          <div class="badge-grid">
+            <div class="badge-card">
+              <svg class="badge-icon"><use href="#icon-seal"/></svg>
+              <div><div class="badge-title">SolidWorks Certified</div></div>
+            </div>
+            <div class="badge-card">
+              <svg class="badge-icon"><use href="#icon-seal"/></svg>
+              <div><div class="badge-title">Autodesk Certified</div></div>
+            </div>
+            <div class="badge-card">
+              <svg class="badge-icon"><use href="#icon-seal"/></svg>
+              <div><div class="badge-title">MATLAB Onramp</div></div>
+            </div>
+            <div class="badge-card">
+              <svg class="badge-icon"><use href="#icon-seal"/></svg>
+              <div><div class="badge-title">Python 3.4.3</div><div class="badge-sub">Completion</div></div>
+            </div>
+          </div>
+        </div>
+        <div>
+          <div class="subhead">Workshops</div>
+          <div class="badge-grid">
+            <div class="badge-card">
+              <svg class="badge-icon"><use href="#icon-workshop"/></svg>
+              <div><div class="badge-title">Industrial Robotics</div><div class="badge-sub">3-Day Workshop</div></div>
+            </div>
+            <div class="badge-card">
+              <svg class="badge-icon"><use href="#icon-workshop"/></svg>
+              <div><div class="badge-title">Fundamentals of Robotics</div><div class="badge-sub">2-Day Workshop</div></div>
+            </div>
+            <div class="badge-card">
+              <svg class="badge-icon"><use href="#icon-workshop"/></svg>
+              <div><div class="badge-title">EV Saksham</div><div class="badge-sub">5-Day EV Workshop</div></div>
+            </div>
+          </div>
+          <div class="badge-note">Certificate scans &amp; award photos coming soon — placeholders shown as icons for now.</div>
         </div>
       </div>
     </div>
